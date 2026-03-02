@@ -37,9 +37,7 @@ export const countUp = async (selector = '[data-count]') => {
         gsap.to(obj, {
           val: target,
           duration: 1,
-          onUpdate: () => {
-            el.textContent = Math.round(obj.val).toLocaleString();
-          }
+          onUpdate: () => (el.textContent = Math.round(obj.val).toLocaleString())
         });
         observer.disconnect();
       });
