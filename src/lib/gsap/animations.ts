@@ -39,6 +39,7 @@ export const countUp = async (selector = '[data-count]') => {
           duration: 1,
          onUpdate: () => {
   el.textContent = Math.round(obj.val).toLocaleString();
+}
 });
         observer.disconnect();
       });
